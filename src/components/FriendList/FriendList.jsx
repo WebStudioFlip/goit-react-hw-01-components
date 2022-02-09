@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 
 
 const FriendList = ({friends}) => {    
-const element = friends.map(frend => <FriendListItem key={frend.id} user={frend} />);
+const element = friends.map(frend => <FriendListItem key={frend.id} {...frend} />);
 
 
 return (<ul className={style.friendList}>

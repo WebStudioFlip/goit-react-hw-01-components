@@ -1,8 +1,8 @@
 import PropTypes from "prop-types";
 import style from "./friendList.module.scss";
 
-const FriendListItem = ({user}) => {
-    const {name, isOnline, avatar} = user
+const FriendListItem = ({name, isOnline, avatar}) => {
+   
     const classFormat= "status" + ((isOnline && "Online")||"Offline")
     return (
 <li className={style.item}><span className={style[classFormat]}></span> <img className={style.avatar} src={avatar} alt="User avatar" width="48" />
