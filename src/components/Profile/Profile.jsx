@@ -34,7 +34,7 @@ const Profile = ({ username, tag, location, avatar, stats }) => {
   );
 };
 
-FriendListItem.propTypes = { 
+Profile.propTypes = { 
   username: PropTypes.string.isRequired,
   tag: PropTypes.string,
   location: PropTypes.string,
