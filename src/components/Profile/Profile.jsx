@@ -1,4 +1,5 @@
 import style from "./profile.module.scss";
+import PropTypes from "prop-types";
 
 
 const Profile = ({ username, tag, location, avatar, stats }) => {
@@ -32,5 +33,17 @@ const Profile = ({ username, tag, location, avatar, stats }) => {
     </div>
   );
 };
+
+FriendListItem.propTypes = { 
+  username: PropTypes.string.isRequired,
+  tag: PropTypes.string,
+  location: PropTypes.string,
+  avatar: PropTypes.string,
+      stats:  PropTypes.shape({
+        followers: PropTypes.number,
+        views: PropTypes.number,
+        likes: PropTypes.number
+    }) 
+}
 
 export default Profile;
